@@ -2,16 +2,13 @@
 *{
     margin:0;
 }
-
-body{
-    text-align: center;
-}
 .wrapper{
     width:100%;
     background-color: grey;
     overflow:auto;
     text-align:center;
 }
+
 
 .logo{
     font-size: larger;
@@ -40,7 +37,10 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/*Responsive Nav bar*/
+
+
+/*Responsive nav bar*/
+
 @media screen and (max-width:500px)
 {
     .wrapper a{
@@ -48,6 +48,38 @@ body{
         display:block;
     }
 }
+
+/*Aisles*/
+body{
+    font-family: Verdana;
+    background-color: rgb(234, 247, 203)
+}
+
+div a{
+    color:black;
+    font-family: Verdana;
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center;
+}
+
+.column {
+    float: left;
+    width: 28%;
+    padding-left: 4.5%;
+  }
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
 
 /*Footer*/
 .bottom{
@@ -74,37 +106,3 @@ body{
 .contact{
     float:right;
 }
-
-/*Aisles*/
-body{
-    font-family: Verdana;
-    background-color: rgb(234, 247, 203)
-}
-
-div a{
-    color:black;
-    font-family: Verdana;
-    text-decoration: none;
-    font-size: 15px;
-    text-align: center;
-    
-}
-
-
-.column {
-    float: left;
-    width: 28%;
-    padding-left: 4.5%;
-  }
-
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
