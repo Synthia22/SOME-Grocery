@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-
 <html>
     <head>
+        <meta charset="UTF-8">
+        <title>
+            Sign In
+        </title>
         <link rel="stylesheet" href="style-si.css">
         <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
-        
     </head>
 
-<body>
-           <!--Navigation Bar-->
-            
-           <header>
+    <body> 
+        <!--Navigation Bar-->
+        <header>
             <div class="wrapper">
                 <div class="logo">
                     <a href="menu.html"><i class="fas fa-seedling"></i>SOME BRAND</a>
@@ -21,69 +22,36 @@
                     <a href="about.html">About Us</a>
                     <a href="service.html">Services</a>
                     <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
-                   
                     <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a> 
                     <a id="emB" href=""><i class="fas fa-id-card-alt"></i>Employees</a>
                 </nav>
 
-            </div>
-
-            
-        </header> 
-
+            </div>   
+        </header> <br>
         <!--End of Navigation Bar-->
 
-    
-    <h2>Sign In</h2>
+        <!--Sign In-->
+        <h2>Sign In</h2>
 
-    <h5> In order to access your account and take advantage of all your personalized benefits, please Sign In!</h5> <br>
-        
-    <div class="box">
-        <p>
-            <label for="email">Email</label> <br>
-            <input type="text" id="email" name="email">
-        </p>
-        <p>
-            <label for="pwd">Password</label><br>
-            <input type="password" id="pwd" name="pwd">
-        </p>
-           <label for="rememberUser"> Remember Me</label>
-           <input type="checkbox" value="rememberUser" id="rememberUser"> <br>
+        <h5> In order to access your account and take advantage of all your personalized benefits, please Sign In!</h5> <br>
             
-           <button id="signIn" onclick="checkaccount()"> SIGN IN </button>
-
-    </div>
-
-    <h6> Don't have an account with us? <a href="Sign Up.html">Sign Up now!</a></h6>
-
-    
-          <!--Footer-->
-
-    <div class="bottom">
-                
-     
-        <p class="words" style="font-size: larger;">
-            Quick Links
-            <br>
+        <div class="box">
             <p>
-                <a class="contact" href="contact.html"><i class="fas fa-at"></i>Contact Us</a>
-            
-            <br>
-            
-            
-            <a href="menu.html"><i class="fas fa-home"></i>Home</a> 
-            
-
-           
-            <a href="about.html"><i class="fas fa-users"></i>Who are we?</a>
+                <label for="email">Email</label> <br>
+                <input type="text" id="email" name="email" required>
             </p>
-            
-        </p>
-    
-    </div>
+            <p>
+                <label for="pwd">Password</label><br>
+                <input type="password" id="pwd" name="pwd" required>
+            </p>
 
-    <!--End of Footer-->
+            <button id="forgotpwd" onclick="checkpwd()"> Forgot Password</button> <br> <br>
+                
+            <button id="signIn" onclick="checkaccount()"> SIGN IN </button>
 
-</body>
+        </div>
 
+        <h6> Don't have an account with us? <a href="Sign Up.html">Sign Up now!</a></h6> <br>
+        <!--End of Sign In-->
+    </body>
 </html>
