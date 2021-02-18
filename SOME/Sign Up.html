@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            Carrot
+            Sign Up
         </title>
-        <link rel="stylesheet" href="carrot.css">
+        <link rel="stylesheet" href="style-su.css">
         <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
-    </head>
+    </head> <br>
 
-    <body>
+    <body> 
+
         <!--Navigation Bar-->
         <header>
             <div class="wrapper">
@@ -30,43 +31,95 @@
         </header>
         <!--End of Navigation Bar-->
 
-        <!--Potato-->
-        <div class="row">
-            <div class="column"> <br>
-                <img src="pics/carrot.jpg" alt="background-image" weight="300" height="300">
-            </div>                
-            <div class="column1"> <br> 
-                <h2>Carrot </h2>
-                    <h5>Sold in a bag. One bunch weights approx. 80g. </h5> <br>
-
-                    <p>0.49$/unit</p>
-                    <button onclick="readDescription()" id="minfo">More Description</button> <br>
-                    <div class="moreinfo">
-                        <h6>Description: Crunchy and sweet, carrots make a great snack as well as a perfect addition to your salads or sides. Rich in vitamin C and beta-carotene. </h6>
-                        <h6>Storage: Refrigerate</h6>
-                        <h6>Product #:987-026</h6>
-                    </div><br>
-
-                    <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
-                    <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
+        <!--Sign Up-->
+        <h2>Sign Up</h2> <br>
+        <div class="personalinfo">
+            <h4> Personal Information </h4>
+            <div class="Name">
+                    <div id="fN">
+                        <label for="fname"> First Name </label> <br>
+                        <input type="fname" id="fname" name="fname" required> 
+                    </div>
+                    <div id="lN">
+                        <label for="lname"> Last Name </label> <br>
+                        <input type="lname" id="lname" name="lname" required> 
+                    </div>
             </div> 
         </div><br>
-        <!--End of Potato-->
-        
-        <!--Footer-->
-        <div class="bottom">
-            <p class="words" style="font-size: larger;">
-                Quick Links
-    
-                <br>
-                <p>
-                    <a class="contact" href="contact.html"><i class="fas fa-at"></i>Contact Us</a><br>
-                    <a href="menu.html"><i class="fas fa-home"></i>Home</a>
-                    <a href="about.html"><i class="fas fa-users"></i>Who are we?</a>
-                </p>
+
+        <div class="contactInfo">
+            <h4> Contact Information </h4>
+            <p>
+                <label for="address"> Address </label> <br>
+                <input type="address" id="address" name="address" required>
             </p>
+            
+            <div class="top">
+                <div id="ct">
+                    <label for="city"> City  </label> <br>
+                    <input type="city" id="city" name="city" required>
+                </div>
+                <div id="pc">
+                    <label for="postalCode"> Postal Code </label> <br>
+                    <input type="postalCode" id="postalCode" name="postalCode" required>
+                </div>
+            </div> 
+
+        <div class="middle">
+            <div id="pv">
+                <p>
+                    <label for="province"> Province </label> <br>
+                    <select name="province" id="province" required>
+                        <option value selected="selected">Select your province</option>
+                        <option value="ab">Alberta</option>
+                        <option value="bc">British Columbia</option>
+                        <option value="mb">Manitoba</option>
+                        <option value="nb">New Brunswick</option>
+                        <option value="nl">Newfoundland and Labrador</option>
+                        <option value="nt">Northwest Territories</option>
+                        <option value="ns">Nova Scotia</option>
+                        <option value="nu">Nunavut </option>
+                        <option value="on">Ontario</option>
+                        <option value="pe">Prince Edward Island</option>
+                        <option value="qc">Quebec</option>                           
+                        <option value="sk">Saskatchewan</option>
+                        <option value="yt">Yukon</option>
+                    </select>
+                </p>
+            </div>
+            <div id="pn">
+                <label for="pnumber"> Phone Number </label> <br>
+                <input type="tel" id="pnumber" name="pnumber" placeholder="222-222-2222" required>
+            </div>
         </div>
-        <!--End of Footer-->
+        
+        <div class="bottom">
+            <div id="em">
+                <label for="email"> Email </label> <br>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <div id="cem">
+                <label for="cemail"> Confirm Email </label> <br>
+                <input type="text" id="cemail" name="cemail" required>
+            </div>
+        </div>
+
+        <p>
+            <label for="pwd"> Password </label> <br>
+            <input type="password" id="pwd" name="pwd" required>
+        </p>
+        <p>
+            <label for="cpwd"> Confirm Password </label> <br>
+            <input type="password" id="cpwd" name="cpwd" required>
+        </p>
+        </div> <br> <br>
+
+        <h5> Consent to Conditions of Use and Protection of Personal Information Policy</h5>
+            
+            <label for="plicy"> I have read and accept the  <u>Conditions of Use and Protection of Personal Information Policy</u>.</label>
+            <input type="checkbox" class="defaultCheckbox" id="policy"><br><br>
+            <button id="createac" onclick="createac()"> CREATE AN ACCOUNT</button> <br> <br>
+        <!--End of Sign Up-->
+
     </body>
 </html>
