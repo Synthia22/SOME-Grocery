@@ -6,4 +6,4 @@ This is a SOEN287 Project: Building a Grocery Store Website
 SOME Brand is an online grocery store made in the context of SOEN287.
 
 # Authors
-
+Synthia Rao, 
