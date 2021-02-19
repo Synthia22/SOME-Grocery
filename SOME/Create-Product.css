@@ -230,7 +230,7 @@ body{
       width:100%;
       padding: 10px;
       color: rgb(0, 0, 0);
-      background-color: rgb(226, 213, 213);
+      background-color: rgb(234, 247, 203);
       font-weight:normal;
       font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
@@ -279,15 +279,7 @@ table{
 
 }
 
-th{
-    text-align: left;
-    width:100%;
-    padding: 10px;
-    color: rgb(0, 0, 0);
-    background-color: rgb(226, 213, 213);
-    font-weight:normal;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
+
 
 td{
     padding:10px 5px;
