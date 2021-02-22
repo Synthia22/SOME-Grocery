@@ -76,7 +76,7 @@ div a{
   }
 
   @media screen and (max-width: 600px) {
-    .column {
+    .column, .column1 {
       width: 100%;
     }
   }
