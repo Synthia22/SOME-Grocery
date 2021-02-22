@@ -154,7 +154,7 @@ input, #province {
 .bottom{
     position:relative;
     left:0;
-    bottom:0;
+    bottom:-40px;
     width:100%;
     background-color:grey;
     color:aliceblue;
