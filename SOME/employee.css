@@ -75,11 +75,12 @@ div a{
     clear: both;
   }
 
-  @media screen and (max-width: 600px) {
-    .column, .column1 {
-      width: 100%;
+  @media screen and (max-width:500px){
+    .bottom, .image, .container{
+        width:100%;
+        margin-top:0;
     }
-  }
+}
 
 /*Footer*/
 .bottom{
