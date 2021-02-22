@@ -152,7 +152,7 @@
         display: inline-block;
         font-size: 16px;
         margin: 4px 2px;
-        margin-left: 1350px;
+        margin-left: 150px;
         transition-duration: 0.4s;
         cursor: pointer;
         ;
@@ -160,7 +160,7 @@
      
     
       @media screen and (max-width: 600px) {
-        .column {
+        .column, .column1{
           width: 100%;
         }
       }
