@@ -1,10 +1,5 @@
-/*Nav bar*/
 *{
     margin:0;
-}
-
-body{
-    text-align: center;
 }
 .wrapper{
     width:100%;
@@ -40,7 +35,8 @@ body{
     font-family:Arial, Helvetica, sans-serif;
 }
 
-/*Responsive Nav bar*/
+/*Responsive nav bar*/
+
 @media screen and (max-width:500px)
 {
     .wrapper a{
@@ -92,7 +88,7 @@ label{
     clear: both;
   }
 
-.Name, .top, .middle, .bottom{
+.Name, .top, .middle, .bottomp{
     overflow:hidden;
 }
 
@@ -113,7 +109,7 @@ label{
 body {
     font-family: Verdana;
     text-align: center;
-    background-color: rgb(234, 247, 203)
+    background-color: rgb(234, 247, 203);
 }
 
 input, #province {
@@ -124,26 +120,6 @@ input, #province {
     padding: 0 10px;
     font-size: 15px;
     outline: none;
-}
-
-input.defaultCheckbox{
-    width: 15px; 
-    height: 15px;
-}
-
-button{
-    border: none;
-    border-radius: 4px;
-    background-color: rgb(186,190,182);
-    padding: 10px;
-    float: center;
-    font-weight:bold;
-}
-
-button:hover{
-    background-color:yellowgreen;
-    color: white;
-    font-weight: bold;
 }
 
 @media screen and (max-width:805px){
@@ -172,11 +148,8 @@ button:hover{
         width: 30%;
         margin-left: 35%;  
     }
-
 }
-
-/*Footer*/
-.footer{
+.bottom{
     position:relative;
     left:0;
     bottom:0;
@@ -188,12 +161,12 @@ button:hover{
     font-size: 20px;
 }
 
-.footer a{
+.bottom a{
     color: aliceblue;
     text-decoration: none;
 }
 
-.links{
+.words{
     padding-top: 20px;
 }
 
