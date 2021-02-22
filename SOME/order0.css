@@ -142,7 +142,7 @@
         padding: 50px;
         margin: 10px;
       }
-      .button1{
+      .button1, .button2{
         background-color: #9ca19c; /* Green */
         border: none;
         color: white;
