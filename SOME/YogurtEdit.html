@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Add User</title>
+        <link rel="stylesheet" href="AddProduct.css">
+        <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
+
+    </head>
+
+<body>
+  <!--Navigation Bar-->
+
+  <header>
+    <div class="wrapper">
+        <div class="logo">
+            <a href="index.html"><i class="fas fa-seedling"></i>SOME BRAND</a>
+        </div>
+        <nav>
+
+            <a href="aisle.html">Aisles</a>
+            <a href="about.html">About Us</a>
+            <a href="service.html">Services</a>
+            <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
+
+            <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a>
+            <a id="emB" href="employee.html"><i class="fas fa-id-card-alt"></i>Employees</a>
+        </nav>
+
+    </div>
+
+
+</header>
+
+<!--End of Navigation Bar-->
+
+<!--Edit Product Type-->
+
+    <h2>Edit Product </h2> <br>
+    <div class="NewProductInfo">
+
+    <div class="ProductInfo">
+        <h4> Product Information </h4>
+        <p>
+            <label for="Name"> Name </label> <br>
+            <input type="Name" id="address"  name="Name" value="Libert Greek Yogurt">
+        </p>
+
+        <div class="top">
+            <div id="SKU">
+                <label for="SKU"> SKU  </label> <br>
+                <input type="SKU" name="SKU" value="0000000003">
+            </div>
+
+            <div id="Weight">
+                <label for="Weight"> Weight, g </label> <br>
+                <input type="Weight" name="Weight"  value="150">
+            </div>
+        </div>
+
+    <div class="middle">
+        <div id="Qte">
+            <p>
+                <label for="Qte"> Qte </label> <br> <input type="number" value="1"><br>
+
+            </p>
+
+        </div>
+        <div id="Price">
+            <label for="Price"> Price/Unit </label> <br>
+            <input type="Price"  name="Price" placeholder="$ CAD" value="3.00">
+        </div>
+    </div>
+
+    <br><select name="Product Type" id="ProductType">
+        <option value selected="selected">Select Product Type</option>
+        <option value="F&V">Fruits & Vegetables</option>
+        <option value="D&E" selected>Dairy & Eggs </option>
+        <option value="B&B">Bread & Bakery</option>
+        <option value="F&S">Fish & Seafood</option>
+        <option value="D&S">Dessert & Snacks</option>
+        <option value="M&P">Meat & Poultry</option>
+    </select>
+    <p>
+        <label for="pwd"> Admin ID </label> <br>
+        <input type="password" id="pwd" name="pwd">
+    </p>
+    <p>
+        <label for="pwd"> Admin Password </label> <br>
+        <input type="password" id="pwd" name="pwd">
+    </p>
+
+    <form action = "menu.html">
+        <p><button type="submit">Save</button></p>
+      </form>
+</div>
+    <br>
+
+<!--End of Edit Product Type-->
+
+         <!--Footer-->
+
+    <div class="bottom">
+
+
+        <p class="words" style="font-size: larger;">
+            Quick Links
+            <br>
+            <p>
+                <a class="contact" href="contact.html"><i class="fas fa-at"></i>Contact Us</a>
+
+            <br>
+
+
+            <a href="index.html"><i class="fas fa-home"></i>Home</a>
+
+
+
+            <a href="about.html"><i class="fas fa-users"></i>Who are we?</a>
+            </p>
+
+        </p>
+
+    </div>
+
+    <!--End of Footer-->
+
+</body>
+</html>
