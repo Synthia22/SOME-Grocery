@@ -25,7 +25,7 @@ function modPrice(){
     var total = price*quantity;
     console.log(quantity);
 
-   document.getElementById("price").innerHTML = total;
+   document.getElementById("price").innerHTML = Math.round(total);
 }
 
 
