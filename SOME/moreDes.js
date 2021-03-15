@@ -22,6 +22,7 @@ function addItem(){
 function modPrice(){
     var price = document.getElementById("fixedP").innerHTML;
     var quantity = document.getElementById("quantity").value;
+    var total = price*quantity;
     var t=total.toFixed(2);
     console.log(quantity);
 
