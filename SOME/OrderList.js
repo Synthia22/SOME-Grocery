@@ -19,3 +19,6 @@ function SaveOrders(){
  function SaveOrder(){
     alert("No product added cannot save new order");
 }
+ function addOrders(){
+    alert("click you want to continue");
+}
