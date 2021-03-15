@@ -15,10 +15,12 @@ ButtonClicked.parentElement.parentElement.parentElement.parentElement.remove()
 
 }
 function updateTotal(){
-    const subtotal= parseFloat(document.querySelector("#subtotal1").dataset.value)+parseFloat(document.querySelector("#subtotal2").dataset.value)+parseFloat(document.querySelector("#subtotal3").dataset.value);
-    const qst=subtotal*0.10;
-    const gst=subtotal*0.05;
-    const total=subtotal+qst+gst;
+   const subtotal= parseFloat(document.querySelector("#subtotal1").dataset.value)+parseFloat(document.querySelector("#subtotal2").dataset.value)+parseFloat(document.querySelector("#subtotal3").dataset.value);
+    const qst=subtotal/10;
+    const gst=subtotal/5;
+
+    const total=(subtotal+qst+gst).toFixed(2);
+   
     const target=document.querySelector("#output");
     let html=`<table> 
         <tr>
