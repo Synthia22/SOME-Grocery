@@ -41,7 +41,7 @@
             <h2>3 Pepper Sirloin Steak</h2>
             <h5>The weight is approx. 480g </h5> <br>
 
-            <p>11.59$/unit</p> 
+            <div id="fixedP">11.59</div> <div id="price">11.59</div>
             <button onclick="readDescription()" id="minfo">More Description</button>
             <div id="moreinfo">
                 <h6>Description: This Sirloin Steak is best served when cooked at rare to medium-rare. </h6>
@@ -50,7 +50,7 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1">
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()">
             <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
 
