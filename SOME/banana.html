@@ -40,7 +40,7 @@
                 <h2>Premium Bananas</h2>
                     <h5>The weight is approx. 120g </h5> <br>
 
-                    <p>0.49$/unit</p>
+                <div id="fixedP">0.49$/unit</div> <div id="price">0.49</div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>Description: Soft, sweet and delicious, the banana is a popular choice. </h6>
@@ -49,7 +49,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
