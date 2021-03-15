@@ -6,9 +6,7 @@
     <title>SOME Shopping Cart</title>
     <link rel="stylesheet" href="order1.css">
     <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
-
-
-    
+     <script src="cart.js" async></script>
 
 </head>
 
@@ -59,13 +57,13 @@
                            <p>Oyster</p>
                           <small>  Price: $12.00 </small>
                            <br>
-                              <a href="">remove</a>
+                            <button class="btn" type="button">remove</button>
                           </div>
                              </div>  
                           </td>
-                      <td><input type="number" value="1" </td>
+                   <td><input type="number" class="qty" value="1" data-cost="12" data-target="subtotal1"></td>
                        
-                  <td>$12.00</td>
+                  <td data-value="12" id="subtotal1">$12.00</td>
                     </tr>
                     <tr>
                       <td>
@@ -75,13 +73,13 @@
                          <p>Macarons</p>
                         <small>  Price: $5.00 </small>
                          <br>
-                            <a href="">remove</a>
+                           <button class="btn" type="button">remove</button>
                         </div>
                            </div>  
                         </td>
-                    <td><input type="number" value="1" </td>
-                     
-                <td>$5.00</td>
+                  <td><input type="number" value="1" class="qty" value="1" data-cost="5" data-target="subtotal2"> </td>
+                           
+                      <td data-value="5" id="subtotal2">$5.00</td>
                   </tr>
                   <tr>
                       <td>
@@ -91,13 +89,13 @@
                          <p>chips</p>
                         <small>  Price: $8.00 </small>
                          <br>
-                            <a href="">remove</a>
+                           <button class="btn" type="button">remove</button>
                         </div>
                            </div>  
                         </td>
-                    <td><input type="number" value="1" </td>
-                     
-                <td>$8.00</td>
+                  <td><input type="number" value="1" class="qty" value="1" data-cost="8" data-target="subtotal3" ></td>
+                       
+                  <td data-value="8" id="subtotal3">$8.00</td>
                   </tr>
             </table>
 <div class="total-price">
