@@ -133,7 +133,7 @@
 var PassWords="123";
    let products = [];
 
-    // example {id:1592304983049, title: 'Deadpool', year: 2015}
+
     const addProduct = (ev)=>{
         ev.preventDefault();  //to stop the form submitting
         let product = {
@@ -152,22 +152,21 @@ var PassWords="123";
         {
 
         products.push(product);
-        //document.forms[0].reset(); // to clear the form for the next entries
+        // to clear the form for the next entries
         document.querySelector('form').reset();
 
-        //for display purposes only
+        
         console.warn('added' , {products} );
         let pre = document.querySelector('#msg pre');
 
         var myyData = JSON.stringify(products);
-        //var myyData = (movies);
-        //saving to localStorage
+        
         localStorage.setItem('MyMovieList', myyData );
     }
 
     else {
       alert("Password Incorrect");
-        //document.querySelector('form').reset();
+
     }
   }
 
