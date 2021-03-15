@@ -16,3 +16,6 @@ ButtonClicked.parentElement.parentElement.remove()
 function SaveOrders(){
     alert("ALL Orders are now save");
 }
+ function SaveOrder(){
+    alert("No product added cannot save new order");
+}
