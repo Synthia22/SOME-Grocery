@@ -90,9 +90,17 @@ div a{
     text-align: center;
 }
 
-.column1 p{
+#price{
     color: yellowgreen;
     font-weight: bold;
+}
+    
+#price:before {
+    content: '$';
+}
+
+#fixedP {
+    display: none;
 }
 
 .moreinfo h6{
