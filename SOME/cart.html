@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SOME Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>4
+    <script src="cart.js" async></script>
+</head>
+ 
+           <!--Navigation Bar-->
+            
+           <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html"><i class="fas fa-seedling"></i>SOME BRAND</a>
+                </div>
+                <nav>
+                    
+                    <a href="aisle.html">Aisles</a>
+                    <a href="about.html">About Us</a>
+                    <a href="service.html">Services</a>
+                    <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
+                   
+                    <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a> 
+                    <a id="emB" href="employee.html"><i class="fas fa-id-card-alt"></i>Employees</a>
+                </nav>
+
+            </div>
+
+            
+        </header> 
+
+        <!--End of Navigation Bar-->
+<body>
+
+ 
+    <!--Cart Page--> 
+
+       <div class="small-container cart-page">
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>
+                          <div class="cart-info">
+                            <img src="prodcuts/oyster.jpg" alt="background-image" weight="150" height="150">                    
+                                 <div>
+                           <p>Oyster</p>
+                          <small>  Price: $12.00 </small>
+                           <br>
+                           <button class="btn" type="button">remove</button>
+                          </div>
+                             </div>  
+                          </td>
+                      <td><input type="number" class="qty" value="1" data-cost="12" data-target="subtotal1"></td>
+                       
+                  <td data-value="12" id="subtotal1">$12.00</td>
+                    </tr>
+                    
+                  
+                    
+                        <tr>
+                            <td>
+                              <div class="cart-info">
+                                  <img src="prodcuts/macaron.jpg" alt="background-image" weight="150" height="150">               
+                                          <div>
+                               <p>Macarons</p>
+                              <small>  Price: $5.00 </small>
+                               <br>
+                               <button class="btn" type="button">remove</button>
+                              </div>
+                                 </div>  
+                              </td>
+                          <td><input type="number" value="1" class="qty" value="1" data-cost="5" data-target="subtotal2"> </td>
+                           
+                      <td data-value="5" id="subtotal2">$5.00</td>
+                        </tr>
+                  <tr>
+                    <tr>
+                        <td>
+                          <div class="cart-info">
+                              <img src="prodcuts/chips.jpg" alt="background-image" weight="150" height="150">                    
+                                 <div>
+                           <p>chips</p>
+                          <small>  Price: $8.00 </small>
+                           <br>
+                           <button class="btn" type="button">remove</button>
+                          </div>
+                             </div>  
+                          </td>
+                      <td><input type="number" value="1" class="qty" value="1" data-cost="8" data-target="subtotal3" ></td>
+                       
+                  <td data-value="8" id="subtotal3">$8.00</td>
+                    </tr>
+            </table>
+<div class="total-price" id="output">
+  <table> 
+      <tr>
+      <td>Subtotal</td>
+      <td>$25.00</td> 
+      </tr>
+      <tr>
+      <td>QST</td>
+      <td>$3.00</td>
+            </tr> 
+      <tr>  <td>GST</td>
+          <td>$2.00</td>
+      </tr>
+<tr>
+      <td>Total</td>
+      <td>$30.00</td>
+  </tr>
+  </table>
+</div>
+
+          </div>
+          
+     
+        <!--End of Fruits & Vegetables-->
+      
+   
+
+
+           <!--Footer-->
+
+    <div class="bottom">
+                
+     
+        <p class="words" style="font-size: larger;">
+            Quick Links
+
+            <br>
+            <p>
+                <a class="contact" href="contact.html"><i class="fas fa-at"></i>Contact Us</a>
+            
+            <br>
+            
+            
+            <a href="index.html"><i class="fas fa-home"></i>Home</a> 
+            
+
+           
+            <a href="about.html"><i class="fas fa-users"></i>Who are we?</a>
+            </p>
+            
+        </p>
+    
+    </div>
+
+    <!--End of Footer-->
+</body>
+
+
+
+
+</html>
