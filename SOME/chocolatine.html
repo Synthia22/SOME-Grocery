@@ -40,7 +40,7 @@
                 <h2>Chocolatine</h2>
                     <h5>The weight is approx. 25g </h5> <br>
 
-                    <p>3.99$/unit</p>
+                <div id="fixedP">3.99</div><div id="price">3.99</div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>A croissant is a buttery, flaky, viennoiserie pastry of Austrian origin, named for its historical crescent shape. </h6>
@@ -49,7 +49,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
