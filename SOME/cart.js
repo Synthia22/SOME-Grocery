@@ -17,7 +17,7 @@ ButtonClicked.parentElement.parentElement.parentElement.parentElement.remove()
 function updateTotal(){
    const subtotal= parseFloat(document.querySelector("#subtotal1").dataset.value)+parseFloat(document.querySelector("#subtotal2").dataset.value)+parseFloat(document.querySelector("#subtotal3").dataset.value);
     const qst=subtotal/10;
-    const gst=subtotal/5;
+    const gst=subtotal/20;
 
     const total=(subtotal+qst+gst).toFixed(2);
    
