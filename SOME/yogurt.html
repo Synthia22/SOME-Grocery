@@ -41,7 +41,7 @@
             <h2>Plain Yogurt</h2>
             <h5>The weight is approx. 150g </h5> <br>
 
-            <p>3$/unit</p>
+            <div id="fixedP">3</div> <div id="price">3</div>
             <button onclick="readDescription()" id="minfo">More Description</button> <br>
             <div id="moreinfo">
                 <h6>Description:Its 3 dollars because its the closes way to saying free in number term. </h6>
@@ -50,7 +50,7 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1"> <br>
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()"> <br>
             <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
     </div><br>
