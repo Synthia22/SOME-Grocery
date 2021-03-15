@@ -22,10 +22,10 @@ function addItem(){
 function modPrice(){
     var price = document.getElementById("fixedP").innerHTML;
     var quantity = document.getElementById("quantity").value;
-    var total = price*quantity;
-    console.log(Math.round(quantity));
+    var t=total.toFixed(2);
+    console.log(quantity);
 
-   document.getElementById("price").innerHTML = Math.round(total);
+   document.getElementById("price").innerHTML = t;
 }
 
 
