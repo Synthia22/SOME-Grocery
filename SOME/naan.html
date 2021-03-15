@@ -40,7 +40,7 @@
                 <h2>Naan</h2>
                     <h5>The weight is approx. 170g </h5> <br>
 
-                    <p>7.29$/unit</p> <br>
+                <div id="fixedP">7.29</div> <div id="price">7.29</div><br>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                      <h6>A hand stretched flatbread savored in Central Asia. Known for its softness and flexibility.</h6>    
@@ -49,7 +49,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
