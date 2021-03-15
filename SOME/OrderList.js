@@ -13,3 +13,6 @@ ButtonClicked.parentElement.parentElement.remove()
 })
 
 }
+function SaveOrders(){
+    alert("ALL Orders are now save");
+}
