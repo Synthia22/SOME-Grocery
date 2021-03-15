@@ -8,3 +8,13 @@ function readDescription(){
         x.style.display="none";
     }
 }
+
+/*Add to cart function */
+//Just outputting an alert to test the button
+//We use php to add the rest of functionality
+
+function addItem(){
+    alert("Item added to the cart.");
+}
+
+
