@@ -40,7 +40,7 @@
                 <h2>Sweet Bell Pepper, Red </h2>
                     <h5>The weight is approx. 140g</h5> <br>
 
-                    <p>2.99$/unit</p>
+                <div id="fixedP">2.99$/unit</div><div id="price"></div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>Description: These bell peppers bring flavour, crunch and colour to any meal. Great for appetizer or cook them into your favourite meal. </h6>
@@ -49,7 +49,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
