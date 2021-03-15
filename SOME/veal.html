@@ -41,7 +41,7 @@
             <h2>Lean Ground Veal</h2>
             <h5>The weight is approx. 255g </h5> <br>
 
-            <p>4.98$/unit</p>
+            <div id="fixedP">4.98</div> <div id="price">4.98</div>
             <button onclick="readDescription()" id="minfo">More Description</button> <br>
             <div id="moreinfo">
                 <h6>Description: Ground Veal has an expiration date of no longer than 2 weeks. </h6>
@@ -50,7 +50,7 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" min="1">
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()">
             <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
 
