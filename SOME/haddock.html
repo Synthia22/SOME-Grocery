@@ -39,7 +39,7 @@
             <div class="column1"> <br> 
                 <h2>Fresh Haddock Fillet</h2>
                     <h5>The weight is approx. 200g </h5> <br>
-                    <p>$6.39/unit</p>
+                    <div id="fixedP">6.39</div> <div id="price">6.39</div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>Description: A fresh fillet of Haddock caught along the cost of Canada. It is delicate, mild, yet slightly sweet in flavour.</h6>
@@ -48,7 +48,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
