@@ -1,44 +1,349 @@
 <!DOCTYPE html>
-
 <html>
     <head>
-        <title>Add Order</title>
-        <link rel="stylesheet" href="orderadd.css">
+        <meta charset="UTF-8">
+        <title>
+            User List
+        </title>
+        <link rel="stylesheet" href="UserList.css">
         <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
-        
+        <script type = "text/javascript"  src = "UserList.js" >
+        </script>
     </head>
 
-<body>
-  <!--Navigation Bar-->
+    <body onload="alert(' !!!!WARNING!!!!    \nDeletion of an user is irreversible')">
+        <!--Navigation Bar-->
+        <header>
+            <div class="wrapper">
+                <div class="logo">
+                    <a href="index.html"><i class="fas fa-seedling"></i>SOME BRAND</a>
+                </div>
+                <nav>
+                    
+                    <a href="aisle.html">Aisles</a>
+                    <a href="about.html">About Us</a>
+                    <a href="service.html">Services</a>
+                    <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
+                    <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a> 
+                    <a id="emB" href="employee.html"><i class="fas fa-id-card-alt"></i>Employees</a>
+                </nav>
+
+            </div>   
+        </header>
+        <!--End of Navigation Bar-->
+
+        <!--Table-->
+        <div id = "Yaha">
+        <form>
+        <p><table id= "myTable" style border="border">
+      <caption>User list</caption>
+      <tr class="prop">
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Phone number</th>
+          <th>Edition</th>
+          <th>Deletion</th>
+      </tr>
+      <tr id ="row-1">
+          <th>Mark</th>
+          <th>Phil</th>
+          <th>phil@yahoo.fr</th>
+          <th>000-483-1234</th>
+          <th style="display:none">Nimes</th>
+          <th style="display:none">620 ch...</th>
+          <th style="display:none">30900</th>
+          <th style="display:none">gard</th>
+          <th type="password" style="display:none">1234</th>
+          <th>
+              
+            <p><input type = "button"  value = "Edit" onclick="change(1)"/></p>
+            </th>
+            <th>
+              
+                <p><input type = "button"  value = "Delete" onclick="deleteUser(1)"/></p>
+                </th>
+      </tr>
+      <tr id ="row-2">
+        <th>William</th>
+        <th>Parker</th>
+        <th>wparker@gmail.com</th>
+        <th>111-167-9382</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
             
-  <header>
-    <div class="wrapper">
-        <div class="logo">
-            <a href="index.html"><i class="fas fa-seedling"></i>SOME BRAND</a>
-        </div>
-        <nav>
+          <p><input type = "button"  value = "Edit" onclick="change(2)"/></p>
+          </th>
+          <th>
             
-            <a href="aisle.html">Aisles</a>
-            <a href="about.html">About Us</a>
-            <a href="service.html">Services</a>
-            <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
-           
-            <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a> 
-            <a id="emB" href="employee.html"><i class="fas fa-id-card-alt"></i>Employees</a>
-        </nav>
-
-    </div>
-
-    
-</header> 
-
-<!--End of Navigation Bar-->
-    
-    <h2>New order</h2> <br>
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(2)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-3">
+        <th>Nicolas</th>
+        <th>Towa</th>
+        <th>nicolastowa@outlook.com</th>
+        <th>567-483-0987</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(3)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(3)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-4">
+        <th>Malcolm</th>
+        <th>Johnson</th>
+        <th>mjohnson@yahoo.fr</th>
+        <th>689-532-4231</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(4)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(4)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-5">
+        <th>Bebeto</th>
+        <th>Bezbar</th>
+        <th>bb@gmail.com</th>
+        <th>098-567-1234</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(5)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(5)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-6" style="display: none;">
+        <th>Brice</th>
+        <th>Towa</th>
+        <th>nicolastowa@yahoo.fr</th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(6)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(6)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-7">
+        <th>bebeto</th>
+        <th>Towa</th>
+        <th>nicolastowa@yahoo.fr</th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(7)" /></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(7)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-8" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(8)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(8)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-9" style="display: none;">
+        <th></th>
+        <th>s</th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(9)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(9)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-10" style="display: none;">
+        <th> </th>
+        <th> </th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(10)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(10)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-11" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(11)" /></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(11)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-12" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(12)" /></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(12)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-13" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(13)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(13)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-14" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(14)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(14)"/></p>
+              </th>
+    </tr>
+    <tr id ="row-15" style="display: none;">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th>000-483-1389</th>
+        <th style="display:none">Nimes</th>
+        <th style="display:none">620 ch...</th>
+        <th style="display:none">30900</th>
+        <th style="display:none">gard</th>
+        <th type="password" style="display:none">1234</th>
+        <th>
+            
+          <p><input type = "button"  value = "Edit" onclick="change(15)"/></p>
+          </th>
+          <th>
+            
+              <p><input type = "button"  value = "Delete" onclick="deleteUser(15)"/></p>
+              </th>
+    </tr>
+     
+    </table>
+                </p>
+            <p><input type = "button"  value = "Add" id ="Add"onclick="unHideAdd()"/></p>
+        </form></div>
+        <div id = "Editing" style="display: none;">
+        <h2>EDIT</h2> <br>
     <div class="personalinfo">
-        <h4> User's Information </h4>
+        <h4> Edit User's Information </h4>
+        <form action = "index.html"></form>
         <div class="Name">
                 <div id="fN">
+                    <input type="voir" id="voir" name="voir" value="0" style="display: none;">
+                    <input type="password" id="mdp" name="mdp" value="0" style="display: none;">
                     <label for="fname"> First Name </label> <br>
                     <input type="fname" id="fname" name="fname"> 
                 </div>
@@ -67,31 +372,151 @@
             </div>
         </div> 
 
- 
+    <div class="middle">
+        <div id="pv">
+            <p>
+                <label for="province"> Province </label> <br>
+                <select name="province" id="province">
+                    <option value selected="selected">Select your province</option>
+                    <option value="ab">Alberta</option>
+                    <option value="bc">British Columbia</option>
+                    <option value="mb">Manitoba</option>
+                    <option value="nb">New Brunswick</option>
+                    <option value="nl">Newfoundland and Labrador</option>
+                    <option value="nt">Northwest Territories</option>
+                    <option value="ns">Nova Scotia</option>
+                    <option value="nu">Nunavut </option>
+                    <option value="on">Ontario</option>
+                    <option value="pe">Prince Edward Island</option>
+                    <option value="qc">Quebec</option>                           
+                    <option value="sk">Saskatchewan</option>
+                    <option value="yt">Yukon</option>
+                </select>
+            </p>
+        </div>
+        <div id="pn">
+            <label for="pnumber"> Phone Number </label> <br>
+            <input type="tel" id="pnumber" name="pnumber">
+        </div>
+    </div>
     
+    <div class="bottomp">
+        <div id="em">
+            <label for="email"> Current Email </label> <br>
+            <input type="text" id="email" name="email">
+        </div>
+        <div id="cem">
+            <label for="cemail"> New Email </label> <br>
+            <input type="text" id="cemail" name="cemail">
+        </div>
+    </div>
+
+    <p>
+        <label for="pwd"> Current Password </label> <br>
+        <input type="password" id="pwd" name="pwd">
+    </p>
+    <p>
+        <label for="cpwd"> New Password </label> <br>
+        <input type="password" id="cpwd" name="cpwd">
+    </p>
+    
+        <p><input type = "button"  value = "Save" onclick="bringBack()"/></p>
+      </form>
+</div>
+</div>
+
+<div id="Appending" style="display: none;"><h2>New Order</h2> <br>
+    <div class="personalinfo">
+        <h4> User's Information </h4>
+        <div class="Name">
+                <div id="fN">
+                    <label for="fname"> First Name </label> <br>
+                    <input type="fname" id="fname2" name="fname2"> 
+                </div>
+                <div id="lN">
+                    <label for="lname"> Last Name </label> <br>
+                    <input type="lname" id="lname2" name="lname2"> 
+                </div>
+        </div> 
+    </div><br>
+
+    <div class="contactInfo">
+        <h4> Contact Information </h4>
+        <p>
+            <label for="address"> Address </label> <br>
+            <input type="address" id="address2" name="address2">
+        </p>
+        
+        <div class="top">
+            <div id="ct">
+                <label for="city"> City  </label> <br>
+                <input type="city" id="city2" name="city2">
+            </div>
+            <div id="pc">
+                <label for="postalCode"> Postal Code </label> <br>
+                <input type="postalCode" id="postalCode2" name="postalCode2" placeholder="i.e: A2F J9K">
+            </div>
+        </div> 
+
+    <div class="middle">
+        <div id="pv">
+            <p>
+                <label for="province"> Province </label> <br>
+                <select name="province2" id="province2">
+                    <option value selected="selected">Select your province</option>
+                    <option value="ab">Alberta</option>
+                    <option value="bc">British Columbia</option>
+                    <option value="mb">Manitoba</option>
+                    <option value="nb">New Brunswick</option>
+                    <option value="nl">Newfoundland and Labrador</option>
+                    <option value="nt">Northwest Territories</option>
+                    <option value="ns">Nova Scotia</option>
+                    <option value="nu">Nunavut </option>
+                    <option value="on">Ontario</option>
+                    <option value="pe">Prince Edward Island</option>
+                    <option value="qc">Quebec</option>                           
+                    <option value="sk">Saskatchewan</option>
+                    <option value="yt">Yukon</option>
+                </select>
+            </p>
+        </div>
+        <div id="pn">
+            <label for="pnumber"> Phone Number </label> <br>
+            <input type="tel" id="pnumber2" name="pnumber2" placeholder="222-222-2222">
+        </div>
+    </div>
     
     <div class="bottomp">
         <div id="em">
             <label for="email"> Email </label> <br>
-            <input type="text" id="email" name="email">
+            <input type="text" id="email2" name="email2"placeholder="i.e: example@yahoo.com">
         </div>
-   
+        <div id="cem">
+            <label for="cemail"> Confirm Email </label> <br>
+            <input type="text" id="cemail2" name="cemail2">
+        </div>
+    </div>
 
     <p>
         <label for="pwd"> Password </label> <br>
-        <input type="password" id="pwd" name="pwd">
+        <input type="password" id="pwd2" name="pwd2">
     </p>
-    <h4> Add Products </h4>
-    <form action = "aisle.html">
-        <p><button type="submit">Add</button></p>
-      </form>
+    <p>
+        <label for="cpwd"> Confirm Password </label> <br>
+        <input type="password" id="cpwd2" name="cpwd2">
+    </p>
+     <form action = "aisle.html">     <p>
+        <label for="ap"> Add Products </label> <br>
+        <input type="adding" >
+         </p></form>
     <form action = "index.html">
-        <p><button type="submit">Save</button></p>
+        <p><input type="button" value="Add User" onclick="save()"></button></p>
       </form>
-</div> 
-    <br>
-
-
+</div>
+</div>
+          <br>
+        <!--End of Apple-->
+        
          <!--Footer-->
 
     <div class="bottom">
@@ -118,6 +543,5 @@
     </div>
 
     <!--End of Footer-->
-    
-</body>
+    </body>
 </html>
