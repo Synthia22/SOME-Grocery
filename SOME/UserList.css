@@ -176,6 +176,7 @@ table{
       width:50%;
       height:30px;
       text-align:center;
+      
   }
   input:hover{
     background-color:yellowgreen;
@@ -188,3 +189,22 @@ table{
     font-size: 50px;
     color:white;
   }
+  /*UList*/
+  .Name, .top, .middle, .bottomp{
+    overflow:hidden;
+}
+
+#fN, #ct, #pv, #em {
+    display: inline-block;
+    width: 30%;
+}
+
+#lN, #pc, #pn, #cem{
+    display: inline-block;
+    width: 30%;
+}
+
+#address, #pwd, #cpwd {
+    width: 33.5%;
+}
+
