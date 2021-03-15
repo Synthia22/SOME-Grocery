@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-
 <html>
     <head>
         <title>Add User</title>
         <link rel="stylesheet" href="AddProduct.css">
         <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
 
+
+
+
     </head>
+
+    <style>
+    .btn-group button {
+      background-color: #4CAF50; /* Green background */
+      border: 1px solid green; /* Green border */
+      color: white; /* White text */
+      padding: 10px 24px; /* Some padding */
+      cursor: pointer; /* Pointer/hand icon */
+      float: left; /* Float the buttons side by side */
+    }
+
+
+    .btn-group:after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .btn-group button:not(:last-child) {
+      border-right: none; /* Prevent double borders */
+    }
+
+    /* Add a background color on hover */
+    .btn-group button:hover {
+      background-color: #3e8e41;
+    }
+    </style>
 
 <body>
   <!--Navigation Bar-->
-
+<form>
   <header>
     <div class="wrapper">
         <div class="logo">
@@ -47,54 +76,119 @@
         </p>
 
         <div class="top">
-            <div id="SKU">
-                <label for="SKU"> SKU  </label> <br>
-                <input type="SKU" name="SKU" placeholder="0000000001">
-            </div>
+          <div id="Discount">
+              <label for="Discount"> Discount, % </label> <br>
+              <input type="number" value="0" min="0" id=Discounts>
+          </div>
             <div id="Weight">
                 <label for="Weight"> Weight </label> <br>
-                <input type="Weight" name="Weight" placeholder="g">
+                <input type="Weight" id="Weight_" name="Weight" placeholder="g">
             </div>
         </div>
 
     <div class="middle">
         <div id="Qte">
             <p>
-                <label for="Qte"> Qte </label> <br> <input type="number" value="1"><br>
+                <label for="Qte"> Qte </label> <br> <input type="number" value="1" min="1" id=QTEs><br>
 
             </p>
 
         </div>
         <div id="Price">
             <label for="Price"> Price/Unit </label> <br>
-            <input type="Price"  name="Price" placeholder="$ CAD">
+            <input type="Price"  name="Price" placeholder="$ CAD" id="Price_">
         </div>
     </div>
 
 
     <br><select name="Product Type" id="ProductType">
         <option value selected="selected">Select Product Type</option>
-        <option value="F&V">Fruits & Vegetables</option>
-        <option value="D&E">Dairy & Eggs</option>
-        <option value="B&B">Bread & Bakery</option>
-        <option value="F&S">Fish & Seafood</option>
-        <option value="D&S">Dessert & Snacks</option>
-        <option value="M&P">Meat & Poultry</option>
+        <option value="Fruits & Vegetables">Fruits & Vegetables</option>
+        <option value="Dairy & Eggs">Dairy & Eggs</option>
+        <option value="Bread & Bakery">Bread & Bakery</option>
+        <option value="Fish & Seafood">Fish & Seafood</option>
+        <option value="Dessert & Snacks">Dessert & Snacks</option>
+        <option value="Meat & Poultry">Meat & Poultry</option>
     </select>
     <p>
-        <label for="pwd"> Admin ID </label> <br>
-        <input type="password" id="pwd" name="pwd">
+        <label for="pwd"> Admin Password </label> <br>
+        <input type="password" id="pwds" name="pwd">
     </p>
     <p>
-        <label for="pwd"> Admin Password </label> <br>
-        <input type="password" id="pwd" name="pwd">
+        <label for="pwd"> Confirm Admin Password </label> <br>
+        <input type="password" id="pwd_" name="pwd">
     </p>
 
-    <form action = "menu.html">
-        <p><button type="submit">Save</button></p>
-      </form>
+
 </div>
     <br>
+
+
+</form>
+
+
+
+<script>
+
+var PassWords="123";
+   let products = [];
+
+    // example {id:1592304983049, title: 'Deadpool', year: 2015}
+    const addProduct = (ev)=>{
+        ev.preventDefault();  //to stop the form submitting
+        let product = {
+            name: document.getElementById('address').value,
+            Discount:  document.getElementById("Discounts").value,
+            price: document.getElementById('Price_').value,
+            Quantity: document.getElementById('QTEs').value,
+            weight: document.getElementById('Weight_').value,
+            productType: document.getElementById('ProductType').value,
+            password: document.getElementsByName('pwds').value,
+            passWords: document.getElementsByName('pwd_').value,
+
+        }
+
+        if(PassWords ===  document.getElementById('pwds').value && PassWords===document.getElementById('pwd_').value)
+        {
+
+        products.push(product);
+        //document.forms[0].reset(); // to clear the form for the next entries
+        document.querySelector('form').reset();
+
+        //for display purposes only
+        console.warn('added' , {products} );
+        let pre = document.querySelector('#msg pre');
+
+        var myyData = JSON.stringify(products);
+        //var myyData = (movies);
+        //saving to localStorage
+        localStorage.setItem('MyMovieList', myyData );
+    }
+
+    else {
+      alert("Password Incorrect");
+        //document.querySelector('form').reset();
+    }
+  }
+
+    document.addEventListener('DOMContentLoaded', ()=>{
+
+        document.getElementById('btn').addEventListener('click', addProduct);
+
+    });
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
 
 <!--End of New Product Type-->
 
@@ -102,6 +196,15 @@
 
     <div class="bottom">
 
+  <div class="btn-group" style="width:100%">
+  </form>
+  <form action = "index.html">
+      <p><button id="btn" style="width:50%">Save</button></p>
+    </form>
+        <form action = "hh.html">
+            <p><button type="submit" style="width:50%">Product List</button></p>
+
+<br>
 
         <p class="words" style="font-size: larger;">
             Quick Links
