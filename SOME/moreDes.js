@@ -1,3 +1,4 @@
+/*More Description*/
 function readDescription(){
     var x=document.getElementById("moreinfo");
 
@@ -16,5 +17,17 @@ function readDescription(){
 function addItem(){
     alert("Item added to the cart.");
 }
+
+/*Price according to Quantity*/
+function modPrice(){
+    var price = document.getElementById("fixedP").innerHTML;
+    var quantity = document.getElementById("quantity").value;
+    var total = price*quantity;
+    console.log(quantity);
+
+   document.getElementById("price").innerHTML = total;
+}
+
+
 
 
