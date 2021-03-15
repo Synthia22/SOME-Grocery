@@ -39,7 +39,7 @@
             <div class="column1"> <br> 
                 <h2>Precooked Shrimps</h2>
                     <h5>The weight is approx. 200g </h5> <br>
-                    <p>$8.38/unit</p>
+                    <div id="fixedP">8.38</div> <div id="price">8.38</div>
                     <button onclick="readDescription()" id="minfo">More Description</button><br>
                     <div id="moreinfo">
                         <h6>Description: Satisfy your seafood cravings with these beautiful Shrimp. Each resealable pack contains around 70 shrimp per pound that have been cooked, deveined and peeled. </h6>
@@ -48,7 +48,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
