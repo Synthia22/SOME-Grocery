@@ -41,7 +41,7 @@
                 <h2>Fig Cake</h2>
                     <h5>The weight is approx. 820g </h5> <br>
 
-                    <p>25$</p>
+                <div id="fixedP">25</div><div id="price">25</div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>Description: Vanilla Cake with Figs, Healthy Cake for any celebration!</h6>
@@ -50,7 +50,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
