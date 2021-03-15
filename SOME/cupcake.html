@@ -41,7 +41,7 @@
                 <h2>Cupcakes, Vanilla </h2>
                     <h5>The weight is approx. 284g </h5> <br>
 
-                    <p>2$</p> 
+                <div id="fixedP">2</div><div id="price">2</div>
                     <button onclick="readDescription()" id="minfo">More Description</button> <br>
                     <div id="moreinfo">
                         <h6>Description: Cupcakes with a vanilla batter. The icing of the cupcake is made with heavy cream. Moist cupcakes for any celebration! </h6>
@@ -50,7 +50,7 @@
                     </div><br>
 
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1"> <br>
+                    <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0"> <br>
                     <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
             </div> 
         </div><br>
