@@ -23,7 +23,7 @@ function modPrice(){
     var price = document.getElementById("fixedP").innerHTML;
     var quantity = document.getElementById("quantity").value;
     var total = price*quantity;
-    console.log(quantity);
+    console.log(Math.round(quantity));
 
    document.getElementById("price").innerHTML = Math.round(total);
 }
