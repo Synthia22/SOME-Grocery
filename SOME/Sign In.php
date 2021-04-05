@@ -25,7 +25,7 @@
                     <a href="about.html">About Us</a>
                     <a href="service.html">Services</a>
                     <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
-                    <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a>
+                    <a id="SignB" href="Sign In.php"><i class="far fa-user"></i>Sign In</a>
                 </nav>
 
             </div>
