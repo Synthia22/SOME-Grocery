@@ -109,7 +109,7 @@ function check() {
     }
 
     if(errorPlease == false) {
-        alert("A verification e-mail has been sent. Please check your inbox to finish your registration");
+        alert('Account created, bitch!');
         return true;
     }
 }
@@ -164,12 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-
-        setFormMessage(loginForm, "error", "Invalid username/password combination");
-    });
-
     document.querySelectorAll(".form__input").forEach(inputElement => {
         inputElement.addEventListener("blur", e => {
             if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 10) {
@@ -186,8 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (check() === false) {
             alert("Missing input you blind");
         }
-
-        e.preventDefault();
     });
 
     forgetButtonMade.addEventListener('click', e => {
