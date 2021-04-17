@@ -4,7 +4,7 @@ $_SESSION['erroremail']="";
 $username;
 $password;
 $address;
-$myfile=fopen("Accounts.txt", "a") or die("Unable to find the path/folder for the accounts");
+$myfile=fopen("Accounts.xml", "a") or die("Unable to find the path/folder for the accounts");
 
 if (isset($_POST['createAc'])) {
     $username=$_POST['email'];
@@ -18,7 +18,7 @@ if (isset($_POST['createAc'])) {
     
     */
 
-    $read=fopen("Accounts.txt", "r") or die("Unable to find the path/folder for the accounts");
+    $read=fopen("Accounts.xml", "r") or die("Unable to find the path/folder for the accounts");
     $exist=false;
     while (!feof($read) || fgets($read) != ""){
         $line=fgets($read);
@@ -55,7 +55,7 @@ if (isset($_POST['signBtn'])) {
     */
 
     if ($username!='' && $password!='') {
-            $MyFile=fopen("Accounts.txt", "r") or die("Unable to find the path/folder for the accounts");
+            $MyFile=fopen("Accounts.xml", "r") or die("Unable to find the path/folder for the accounts");
 
         while (!feof($MyFile)) {
             $information = fgets($MyFile);
