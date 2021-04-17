@@ -67,11 +67,11 @@
                 <h1 class="form__title">Create Account</h1>
                 <div class="form__message form__message--error"></div>
                 <div class="form__input-group">
-                    <input type="text" name="firstN" id="signupFirstName" class="form__input" autofocus placeholder="Firstname">
+                    <input type="text" name="firstN" id="signupFirstName" class="form__input" autofocus placeholder="First Name">
                     <div class=" form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
-                    <input type="text" name="lastN" id="signupLastName" class="form__input" autofocus placeholder="Lastname">
+                    <input type="text" name="lastN" id="signupLastName" class="form__input" autofocus placeholder="Last Name">
                     <div class=" form__input-error-message"></div>
                 </div>
                 <div class="form__input-group">
