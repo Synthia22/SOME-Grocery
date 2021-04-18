@@ -172,9 +172,6 @@ htmlentities($xml->save('a.xml'));
 echo "<script> alert('Product was edited!')</script>";
 }
 
-/*else if(((strpos($Errors['namanya'],'good'))===0) && ((strpos($Errors['wamanya'],'good'))===0) && ((strpos($Errors['pamanya'],'good'))===0)
-&& ((strpos($Errors['tamanya'],'good'))===0) && ((strpos($Errors['amanya'],'good'))===0) && ((strpos($Errors['qamanya'],'good'))===0) && ((strpos($Errors['Damanya'],'good'))===0))
-echo "<script> alert('Incorrect Password')</script>";*/
 }
 
 
