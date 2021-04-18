@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+  
+  <info>
+    <name>Krispy Cream</name>
+    <discount>7</discount>
+    <Weight>236</Weight>
+    <Quantity>5</Quantity>
+    <Price>2.66</Price>
+    <Type>Dessert and Snacks</Type>
+  </info>
+</root>
