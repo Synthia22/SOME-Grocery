@@ -133,12 +133,6 @@ $xml->save('a.xml');
 echo "<script> alert('Product was created!')</script>";
 }
 
-/*else if(((strpos($Errors['N_name'],'good'))===0) && ((strpos($Errors['W_name'],'good'))===0) && ((strpos($Errors['P_name'],'good'))===0)
-&& ((strpos($Errors['T_name'],'good'))===0))
-echo "<script> alert('Incorrect Password')</script>";*/
-
-
-
 }
 
 
