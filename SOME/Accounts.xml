@@ -1,1 +1,36 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <name>Lyes</name>
+        <lastname>Jo</lastname>
+        <email>ntk@gmail.com</email>
+        <number>123-123-1234</number>
+        <city>Montral</city>
+        <address>D town</address>
+        <code>H4G 7J0</code>
+        <region>QC</region>
+        <password>1234</password>
+    </user>
+    <user>
+        <name>nico</name>
+        <lastname>Jo</lastname>
+        <email>mmm@gmail.com</email>
+        <number>123-123-1234</number>
+        <city>Montral</city>
+        <address>D town</address>
+        <code>H4G 7J0</code>
+        <region>QC</region>
+        <password>1234</password>
+    </user>
+    <user>
+        <name>bbb</name>
+        <lastname>Jo</lastname>
+        <email>bbb@gmail.com</email>
+        <number>123-123-1234</number>
+        <city>Montral</city>
+        <address>D town</address>
+        <code>H4G 7J0</code>
+        <region>QC</region>
+        <password>1234</password>
+    </user>
+</users>
