@@ -1,4 +1,3 @@
-var count = 7;
 function change(i){
     var myTable = document.getElementById("myTable");
     var row = document.getElementById("row-"+i);
@@ -89,25 +88,45 @@ function save(){
     }
     
     var myTable = document.getElementById("myTable");
-    var count = window.count+1;
-    var i = count;
-    var rangee = document.getElementById("row-"+i);
-    /*khvbjkjhhjbnkmklkklk*/
-rangee.cells[0].innerHTML = document.getElementById("fname2").value;
+    var i = myTable.rows.length;
+    // Create an empty <tr> element and add it to the 1st position of the table:
+var row = myTable.insertRow(myTable.rows.length);
+row.id="row-"+i;
+// Insert new cells (<td> elements) at the 1st and 2nd position of the "new" <tr> element:
+var cell0 = row.insertCell(0);
+var cell1 = row.insertCell(1);
+var cell2 = row.insertCell(2);
+var cell3 = row.insertCell(3);
+var cell4 = row.insertCell(4);
+var cell5 = row.insertCell(5);
+var cell6 = row.insertCell(6);
+var cell7 = row.insertCell(7);
+var cell8 = row.insertCell(8);
+var cell9 = row.insertCell(9);
+var cell10 = row.insertCell(10);
+// Add some text to the new cells:
+cell0.innerHTML = document.getElementById("fname2").value;
+cell1.innerHTML = document.getElementById("lname2").value;
+cell2.innerHTML = document.getElementById("cemail2").value;
+cell3.innerHTML = document.getElementById("pnumber2").value;
+cell4.innerHTML = document.getElementById("city2").value;
+cell5.innerHTML = document.getElementById("address2").value;
+cell6.innerHTML = document.getElementById("postalCode2").value;
+cell7.innerHTML = document.getElementById("province2").value;
+cell8.innerHTML = document.getElementById("cpwd2").value;
+cell9.innerHTML ='<input type = "button"  value = "Edit" onclick="change(' + i + ')"/>';
+cell10.innerHTML ='<input type = "button"  value = "Delete" onclick="deleteUser(' + i + ')"/>';
 
-rangee.cells[1].innerHTML = document.getElementById("lname2").value;
-rangee.cells[2].innerHTML = document.getElementById("cemail2").value;
-rangee.cells[3].innerHTML = document.getElementById("pnumber2").value;
-rangee.cells[4].innerHTML = document.getElementById("city2").value;
-rangee.cells[5].innerHTML = document.getElementById("address2").value;
-rangee.cells[6].innerHTML = document.getElementById("postalCode2").value;
-rangee.cells[7].innerHTML = document.getElementById("province2").value;
-rangee.cells[8].innerHTML = document.getElementById("cpwd2").value;
-rangee.style.display="table-row";
-rangee.cells[0].style.display = "table-cell";
-rangee.cells[1].style.display = "table-cell";
-rangee.cells[2].style.display = "table-cell";
-rangee.cells[3].style.display = "table-cell";
+
+cell4.style="display:none";
+cell5.style="display:none";
+cell6.style="display:none";
+cell7.style="display:none";
+cell8.style="display:none";
+    myTable.style.display = "table";
+    document.getElementById("Add").style.display="initial";
+    document.getElementById("Editing").style.display="none";
+    document.getElementById("Appending").style.display="none";
 
 document.getElementById("lname2").value="";
 document.getElementById("fname2").value="";
@@ -119,13 +138,6 @@ document.getElementById("city2").value="";
 document.getElementById("pwd2").value="";
 document.getElementById("cpwd2").value="";
 document.getElementById("postalCode2").value="";
-
-   
-    myTable.style.display = "table";
-    document.getElementById("Add").style.display="initial";
-    document.getElementById("Editing").style.display="none";
-    document.getElementById("Appending").style.display="none";
-    window.count++;
    
 }
 function unHideAdd(){
@@ -139,3 +151,21 @@ function deleteUser(i){
     var row = document.getElementById("row-"+i);
     row.style.display="none";
 }
+
+function rowInd(x){
+    return x.rowIndex;
+}
+function reArrow(){
+    // Getting the table element
+    var tables = document.getElementById("myTable");
+
+// Looping over tables
+for (var i = 1; i < tables.length; i++) {
+
+    // Get the ith table
+    var table = tables[i];
+    // Set the id dynamically
+    
+    table.id = "row-"+i;
+}
+    }
