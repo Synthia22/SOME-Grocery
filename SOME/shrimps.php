@@ -39,7 +39,7 @@
                     <a href="aisle.html">Aisles</a>
                     <a href="about.html">About Us</a>
                     <a href="service.html">Services</a>
-                    <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
+                    <a id="cartB" href="cart.php"><i class="fas fa-shopping-cart"></i>My Cart</a>
                     <a id="SignB" href="Sign In.php"><i class="far fa-user"></i>Sign In</a> 
                 </nav>
 
@@ -49,6 +49,7 @@
 
         <!--Shrimp-->
         <div class="row">
+            <form method="GET">
             <div class="column"> <br>
                 <img src="pics/shrimp.JPG" alt="background-image" weight="300" height="300">
             </div>                
@@ -66,7 +67,8 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity"> <br>
                     <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
-            </div> 
+            </div>
+            </form>
         </div><br>
         <!--End of Shrimp-->
         
