@@ -49,6 +49,7 @@
     <!--End of Navigation Bar-->
     <!--Milk-->
     <div class="row">
+        <form method="GET">
         <div class="column">
             <br>
             <img src="images/milk.jpg" alt="background-image" weight="300" height="300">
@@ -70,6 +71,7 @@
             <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity"> <br>
             <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
+        </form>
     </div><br>
     <!--End of Milk-->
     <!--Footer-->
