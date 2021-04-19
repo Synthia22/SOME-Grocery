@@ -13,6 +13,10 @@
         }
     }
     fclose($MyFile);
+
+    /* $myFile=fopen("addtoCart.xml", "w") or die("Unable to find the path/folder for the accounts");
+    fwrite($myFile,"");
+    fclose($myFile); */ 
 ?>
 
 <!DOCTYPE html>
