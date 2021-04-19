@@ -1,3 +1,21 @@
+<?php
+    $pName;
+    $pUnitPrice;
+    
+    $myfile=fopen("addtoCart.xml", "a") or die("Unable to find the path/folder for the accounts");
+    
+    if (isset($_GET["additem"])){
+        $pName="Milk";
+        $pUnitPrice=1.00;
+        $pQuantity=$_GET["pquantity"];
+        
+        $data=$pName . ' ' . $pUnitPrice . ' ' . $pQuantity .  "\n";
+
+        fwrite($myfile, $data);
+    } 
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,7 +40,7 @@
                 <a href="aisle.html">Aisles</a>
                 <a href="about.html">About Us</a>
                 <a href="service.html">Services</a>
-                <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
+                <a id="cartB" href="cart.php"><i class="fas fa-shopping-cart"></i>My Cart</a>
                 <a id="SignB" href="Sign In.php"><i class="far fa-user"></i>Sign In</a>
             </nav>
 
@@ -49,8 +67,8 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()"> <br>
-            <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity"> <br>
+            <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
     </div><br>
     <!--End of Milk-->
