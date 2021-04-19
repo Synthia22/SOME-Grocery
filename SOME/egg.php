@@ -48,6 +48,7 @@
     <!--End of Navigation Bar-->
     <!--Egg-->
     <div class="row">
+        <form method="GET">
         <div class="column">
             <br>
             <img src="images/egg.jpg" alt="background-image" weight="300" height="300">
@@ -69,6 +70,7 @@
             <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0" name="pquantity"> <br>
             <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
+        </form>
     </div><br>
     <!--End of Egg-->
     <!--Footer-->
