@@ -1,3 +1,20 @@
+<?php
+    $pName;
+    $pUnitPrice;
+    
+    $myfile=fopen("addtoCart.xml", "a") or die("Unable to find the path/folder for the accounts");
+    
+    if (isset($_GET["additem"])){
+        $pName="Veal";
+        $pUnitPrice=4.98;
+        $pQuantity=$_GET["pquantity"];
+        
+        $data=$pName . ' ' . $pUnitPrice . ' ' . $pQuantity .  "\n";
+
+        fwrite($myfile, $data);
+    } 
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,8 +66,8 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()"> <br>
-            <button id="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity"> <br>
+            <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
 
     </div><br>
