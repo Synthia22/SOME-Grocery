@@ -67,7 +67,7 @@ if (isset($_POST['signBtn'])) {
             }
         }
 
-        $MyFile=fopen("admin.txt", "r") or die("Unable to find the path/folder for the accounts");
+        $MyFile=fopen("admin.xml", "r") or die("Unable to find the path/folder for the accounts");
         $line=fgets($MyFile);
         $lines=explode(" ",$line);
         if ($username==$lines[0] && $password==$lines[1]) {
