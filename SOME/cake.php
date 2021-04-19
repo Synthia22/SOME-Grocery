@@ -50,6 +50,7 @@
         
         <!--Cupcakes-->
         <div class="row">
+            <form method="GET">
             <div class="column"> <br>
                 <img src="pics/fig-cake.jpg" alt="background-image" weight="300" height="300">
             </div>                
@@ -68,7 +69,8 @@
                     <label for="quantity">Quantity:</label>
                     <input type="number" id="quantity" value="quantity" onclick="modPrice()" min="0" name="pquantity"> 
                     <button id="additem"  name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
-            </div> 
+            </div>
+            </form>
         </div><br>
         <!--End of Cupcakes-->
         <!--Footer-->
