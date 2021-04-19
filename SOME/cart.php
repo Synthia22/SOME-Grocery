@@ -2,7 +2,7 @@
     global $lines; 
     $lines= array();
     $index=0;
-    $MyFile=fopen("addtoCart.txt", "r") or die("Unable to find the path/folder for the accounts");
+    $MyFile=fopen("addtoCart.xml", "r") or die("Unable to find the path/folder for the accounts");
 
     while (!feof($MyFile)) {
         $item = fgets($MyFile);
