@@ -1,5 +1,5 @@
 
-var removeCartItemButtons =document.getElementsByClassName('btn')
+/*var removeCartItemButtons =document.getElementsByClassName('btn')
 updateTotal()
 console.log(removeCartItemButtons)
 for (var i=0; i < removeCartItemButtons.length;i++){
@@ -49,6 +49,16 @@ Array.from(document.querySelectorAll(".qty")).forEach(ele=>{
         target.dataset.value=total;
         updateTotal();
     })
-})
+}) */
+
+function modPrice(){
+    var price = document.getElementById("fixedP").innerText;
+    var quantity = document.getElementById("quantity").value;
+    var total = parseFloat(price)*quantity;
+    var t=total.toFixed(2);
+    console.log(quantity);
+
+   document.getElementById("price").innerHTML = t;
+}
 
 
