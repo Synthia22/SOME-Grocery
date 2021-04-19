@@ -67,7 +67,7 @@
             </div><br>
 
             <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity> <br>
+            <input type="number" id="quantity" value="quantity" min="0" onclick="modPrice()" name="pquantity"> <br>
             <button id="additem" name="additem" onclick="addItem()"> <i class="fas fa-shopping-cart"></i> ADD TO CART </button>
         </div>
         </form>
