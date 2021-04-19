@@ -51,8 +51,8 @@
                     <a href="aisle.html">Aisles</a>
                     <a href="about.html">About Us</a>
                     <a href="service.html">Services</a>
-                    <a id="cartB" href="cart.html"><i class="fas fa-shopping-cart"></i>My Cart</a>
-                    <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a>
+                    <a id="cartB" href="cart.php"><i class="fas fa-shopping-cart"></i>My Cart</a>
+                    <a id="SignB" href="Sign In.php"><i class="far fa-user"></i>Sign In</a>
                     <a id="emB" href="employee.html"><i class="fas fa-id-card-alt"></i>Employees</a>
                 </nav>
 
