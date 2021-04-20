@@ -1,64 +1,40 @@
+function modPrice(frm){
+    var quantity;
+    var price= frm.elements['FIXEDP'].value;;
+    
 
-/*var removeCartItemButtons =document.getElementsByClassName('btn')
-updateTotal()
-console.log(removeCartItemButtons)
-for (var i=0; i < removeCartItemButtons.length;i++){
-
-
-var button = removeCartItemButtons[i]
-button.addEventListener('click',function(event){
-var ButtonClicked = event.target
-
-ButtonClicked.parentElement.parentElement.parentElement.parentElement.remove() 
-
-})
-
-}
-function updateTotal(){
-   const subtotal= parseFloat(document.querySelector("#subtotal1").dataset.value)+parseFloat(document.querySelector("#subtotal2").dataset.value)+parseFloat(document.querySelector("#subtotal3").dataset.value);
-    const qst=subtotal/10;
-    const gst=subtotal/20;
-
-    const total=(subtotal+qst+gst).toFixed(2);
-   
-    const target=document.querySelector("#output");
-    let html=`<table> 
-        <tr>
-        <td>Subtotal</td>
-        <td >$${subtotal}</td> 
-        </tr>
-        <tr>
-        <td>QST</td>
-        <td>$${qst}</td>
-            </tr> 
-        <tr>  <td>GST</td>
-            <td>$${gst}</td>
-        </tr>
-    <tr>
-        <td>Total</td>
-        <td>$${total}</td>
-    </tr>
-    </table>`;
-    target.innerHTML=html;
-}
-Array.from(document.querySelectorAll(".qty")).forEach(ele=>{
-    ele.addEventListener("change",e=>{
-        var total=e.target.value*e.target.dataset.cost;
-        var target=document.querySelector(`#${e.target.dataset.target}`)
-        target.innerHTML="$"+total;
-        target.dataset.value=total;
-        updateTotal();
-    })
-}) */
-
-function modPrice(){
-    var price = document.getElementById("fixedP").innerText;
-    var quantity = document.getElementById("quantity").value;
-    var total = parseFloat(price)*quantity;
+    for (i=0;i<frm.elements.length;i++){
+          
+        if(frm.elements[i].type=="number"){
+            quantity = frm.elements[i].value;
+        }
+    }
+    var total = Number(price)*quantity;
     var t=total.toFixed(2);
-    console.log(quantity);
 
-   document.getElementById("price").innerHTML = t;
+    frm.elements["price"].value = t;
+    subTotal();
 }
 
+function subTotal(){
+    var allsubTotal=document.querySelectorAll("#price");
+    var TOTAL=0.0;
+    for (var i=0;i<allsubTotal.length;i++){
+        TOTAL+=parseFloat(allsubTotal[i].value);
+    }
+    var t=TOTAL.toFixed(2);
+    document.getElementById("subtotal").value=t;
 
+    var gst = parseFloat(t*0.05);
+    gst=gst.toFixed(2);
+    var qst = parseFloat(t*0.099);
+    qst=qst.toFixed(2);
+
+    
+
+    var finalTOTAL= parseFloat(TOTAL)+parseFloat(gst)+parseFloat(qst);
+    document.getElementById("QST").value=qst;
+    document.getElementById("GST").value=gst;
+    document.getElementById("ENDPRICE").value=finalTOTAL;
+    console.log(typeof finalTOTAL);
+}
