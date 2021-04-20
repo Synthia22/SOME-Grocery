@@ -5,7 +5,7 @@
     $myfile=fopen("addtoCart.xml", "a") or die("Unable to find the path/folder for the accounts");
     
     if (isset($_GET["additem"])){
-        $pName="Kraft Dinner";
+        $pName="KD";
         $pUnitPrice=100.00;
         $pQuantity=$_GET["pquantity"];
         
