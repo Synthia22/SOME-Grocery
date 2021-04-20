@@ -23,7 +23,7 @@
         fclose($myFile);
         $totsp=$_GET['EnDPRICE'];
         $_SESSION['totalPrice']=(float)$totsp;
-        header("Location: http://localhost/SOME2/aisle.html");
+        header("Location: http://localhost/SOME/payment.php");
     }
      
 ?>
