@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     global $lines; 
     $lines= array();
     $index=0;
@@ -15,9 +17,15 @@
     }
     fclose($MyFile);
 
-    /* $myFile=fopen("addtoCart.xml", "w") or die("Unable to find the path/folder for the accounts");
-    fwrite($myFile,"");
-    fclose($myFile); */ 
+    if(isset($_GET['checkOUT'])){
+        $myFile=fopen("addtoCart.xml", "w") or die("Unable to find the path/folder for the accounts");
+        fwrite($myFile,"");
+        fclose($myFile);
+        $totsp=$_GET['EnDPRICE'];
+        $_SESSION['totalPrice']=(float)$totsp;
+        header("Location: http://localhost/SOME2/aisle.html");
+    }
+     
 ?>
 
 <!DOCTYPE html>
@@ -60,63 +68,129 @@
     <!--Cart--> 
 
        <div class="small-container cart-page">
+       <form method="GET" action="cart.php">
            <form method="GET" action="cart.php">
-            <table>
-                <tr>
-                    <th>Product</th>
-                    <th>Unit Price ($)</th>
-                    <th>Quantity</th>
-                    <th>Subtotal ($)</th>
-                </tr>
+                <table>
+                    <tr>
+                        <th>Product</th>
+                        <th>Unit Price ($)</th>
+                        <th>Quantity</th>
+                        <th>Subtotal ($)</th>
+                    </tr>
 
                     <?php foreach($lines as $line): ?>
-                    <?php 
-                        global $unitPRICE;
-                        $unitPRICE=(float) $line[1];
-                        global $quantity;
-                        $quantity=(float) $line[2];    
-                    ?>
-                    <tr>
-                        <td> <?php echo "<p>".$line[0]."</p>"; ?> <br> 
-                            <button class="btn" type="button">remove</button> 
-                        </td>
-                        <td> 
-                            <div id="fixedP">
-                                <?php echo "<p >".$unitPRICE."</p>"; ?> 
-                            </div>
-                        </td>
-                        <td> <input type="number" id="quantity" class="qty" oninput="modPrice()" value="<?php echo $quantity;?>" ></td>
-                        <td > 
-                            <div id="price" onload="ModPrice(<?php echo $unitPRICE; ?>)"> 
-                                <?php 
-                                    $fPrice=$unitPRICE*$quantity;
-                                    echo $fPrice;
+                    <form method="GET" action="nextpage">
+                        <?php 
+                            global $unitPRICE;
+                            $unitPRICE=(float) $line[1];
+                            global $quantity;
+                            $quantity=(float) $line[2];    
+                        ?>
+                        <tr>
+                            <td> <?php echo "<p>".$line[0]."</p>"; ?> <br> 
+                                <button class="btn" type="button">remove</button> 
+                            </td>
+                            <td> 
+                                <div id="fixedP">
+                                    <input type="text" name="FIXEDP" value="<?php echo $unitPRICE; ?>" readonly> 
+                                </div>
+                            </td>
+                            <td> <input type="number" id="quantity" class="qty" oninput="modPrice(this.form)" value="<?php echo $quantity;?>" ></td>
+                            <td > 
+                                <div> 
+                                    <input id="price"type="text" name="price" value="<?php echo $unitPRICE*$quantity; ?>" readonly>
+                                </div>
+                            </td>
+                        </tr>
+                    </form>
+                    <?php endforeach; ?>   
+                </table>
+            </form>
+           
+            <div class="total-price" id="output">
+            <table> 
+                <tr>
+                    <td>Subtotal ($)</td>
+                    <td> 
+                        <div> 
+                            <?php
+                                global $TOTal;
+                                $TOTal=0.0;
+                                foreach ($lines as $line){
+                                    $uPRICE=(float) $line[1];
+                                    $q=(float) $line[2];
+                                    $TOTal+=($uPRICE*$q);
+                                }
+                            ?>
+                            <input id="subtotal" value="<?php echo $TOTal; ?>" type="text" name="total" onload="subTotal()" readonly>
+                        </div> 
+                    </td> 
+                </tr>
+                <tr>
+                    <td>QST</td>
+                    <td> 
+                        <div>
+                            <?php
+                                global $TOTal;
+                                $TOTal=0.0;
+                                global $qst;
+                                foreach ($lines as $line){
+                                    $uPRICE=(float) $line[1];
+                                    $q=(float) $line[2];
+                                    $TOTal+=($uPRICE*$q);
+                                    $qst= ($TOTal*0.099);
+                                    $qst=round($qst,2,PHP_ROUND_HALF_UP);
+                                }
+                            ?>
+                            <input id="QST" value="<?php echo $qst; ?>" type="text" name="total" onload="subTotal()" readonly>
+                        </div>
+                    </td>
+                </tr> 
+                <tr>  
+                    <td>GST</td>
+                    <td>
+                        <div>
+                            <?php
+                                    global $TOTal;
+                                    $TOTal=0.0;
+                                    global $qst;
+                                    foreach ($lines as $line){
+                                        $uPRICE=(float) $line[1];
+                                        $q=(float) $line[2];
+                                        $TOTal+=($uPRICE*$q);
+                                        $gst= $TOTal*0.05;
+                                        $gst=round($gst,2,PHP_ROUND_HALF_UP);
+                                    }
                                 ?>
-                            </div>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
+                            <input id="GST" value="<?php echo $gst; ?>" type="text" name="total" onload="subTotal()" readonly>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td>
+                        <div>
+                            <?php
+                                    global $TOTal;
+                                    $TOTal=0.0;
+                                    global $qst;
+                                    foreach ($lines as $line){
+                                        $uPRICE=(float) $line[1];
+                                        $q=(float) $line[2];
+                                        $TOTal+=($uPRICE*$q);
+                                        $gst= ($TOTal*0.05);
+                                        $qst= ($TOTal*0.099);
+                                        $finalTOTAL=$gst+$qst+$TOTal;
+                                        $finalTOTAL=round($finalTOTAL,2,PHP_ROUND_HALF_UP);
+                                    }
+                                ?>
+                            <input id="ENDPRICE" value="<?php echo $finalTOTAL; ?>" type="text" name="EnDPRICE" onload="subTotal()" readonly>
+                        </div>
+                    </td>
+                </tr>
+                <tr> <button name="checkOUT"> <i class="fas fa-shopping-cart"></i> CHECK OUT </button> </tr>
             </table>
         </form>
-           
-        <div class="total-price" id="output">
-        <table> 
-            <tr>
-            <td>Subtotal</td>
-            <td>$25.00</td> 
-            </tr>
-            <tr>
-            <td>QST</td>
-            <td>$3.00</td>
-                    </tr> 
-            <tr>  <td>GST</td>
-                <td>$2.00</td>
-            </tr>
-        <tr>
-            <td>Total</td>
-            <td>$30.00</td>
-        </tr>
-        </table>
         </div>
 
           </div>
