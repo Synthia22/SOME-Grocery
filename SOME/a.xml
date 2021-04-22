@@ -1,12 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-  
   <info>
-    <name>Krispy Cream</name>
-    <discount>7</discount>
-    <Weight>236</Weight>
-    <Quantity>5</Quantity>
-    <Price>2.66</Price>
-    <Type>Dessert and Snacks</Type>
+    <name>Eggs</name>
+    <Image>./images/egg.jpg</Image>
+    <Weight>59</Weight>
+    <Quantity>3</Quantity>
+    <Price>2.77</Price>
+    <Type>Dairy and Eggs</Type>
+    <Description>These eggs are the best ever ever!!</Description>
   </info>
+  <info>
+    <name>Milk</name>
+    <Image>./images/milk.jpg</Image>
+    <Weight>300</Weight>
+    <Quantity>3</Quantity>
+    <Price>1.00</Price>
+    <Type>Dairy and Eggs</Type>
+    <Description>This is the best milk ever!</Description>
+  </info>
+  <info>
+    <name>Oreo Ice Cream</name>
+    <Image>./images/Oreo-Ice-cream.jpg</Image>
+    <Weight>500</Weight>
+    <Quantity>1</Quantity>
+    <Price>30.00</Price>
+    <Type>Dairy and Eggs</Type>
+    <Description>This ice cream is dairy free.</Description>
+  </info>
+  <info>
+    <name>Plain Yogurt</name>
+    <Image>./images/yogurt.jpg</Image>
+    <Weight>150</Weight>
+    <Quantity>1</Quantity>
+    <Price>3.00</Price>
+    <Type>Dairy and Eggs</Type>
+    <Description>This yogurt has an expiration date of 2 weeks.</Description>
+  </info>
+  <info>
+    <name>Spicy Italian Sausage</name>
+    <Image>./photos/Italian-Sausage.jpg</Image>
+    <Weight>275</Weight>
+    <Quantity>1</Quantity>
+    <Price>6.89</Price>
+    <Type>Meat and Poultry</Type>
+    <Description>Be careful these sausages 300 on the Scoville scale.</Description>
+  </info>
+  <info>
+    <name>3 Pepper Sirloin Steak</name>
+    <Image>./photos/Sirloin-Steak.jpg</Image>
+    <Weight>480</Weight>
+    <Quantity>4</Quantity>
+    <Price>11.59</Price>
+    <Type>Meat and Poultry</Type>
+    <Description>No need for seasoning, these steaks come pre-marinated. </Description>
+  </info>
+  <info>
+    <name>Lean Ground Veal</name>
+    <Image>./photos/Ground-Veal.jpg</Image>
+    <Weight>255</Weight>
+    <Quantity>1</Quantity>
+    <Price>4.98</Price>
+    <Type>Meat and Poultry</Type>
+    <Description>This meat is best served when BBQ for no more than 5min on each side, for it is very lean.</Description>
+  </info>
+  <info>
+    <name>Vanilla Cupcake</name>
+    <Image>./pics/cupcake.jpg</Image>
+    <Weight>55</Weight>
+    <Quantity>1</Quantity>
+    <Price>2.00</Price>
+    <Type>Dessert and Snacks</Type>
+    <Description>These cupcakes are gluten free.</Description>
+  </info>
+  <info>
+    <name>Cotton Cheesecake</name>
+    <Image>./pics/cheesecake.jpg</Image>
+    <Weight>100</Weight>
+    <Quantity>3</Quantity>
+    <Price>20.00</Price>
+    <Type>Dessert and Snacks</Type>
+    <Description>This cake is two layers and gluten free.</Description>
+  </info>
+  <info>
+    <name>Lays Originals </name>
+    <Image>./pics/chips.jpg</Image>
+    <Weight>35</Weight>
+    <Quantity>1</Quantity>
+    <Price>1.75</Price>
+    <Type>Dessert and Snacks</Type>
+    <Description>All Lays chips are made with Ontario potatoes.</Description>
+  </info>
+  <info>
+    <name>Chocolate Chip Cookies</name>
+    <Image>./pics/cookies.jpg</Image>
+    <Weight>23</Weight>
+    <Quantity>2</Quantity>
+    <Price>2.33</Price>
+    <Type>Dessert and Snacks</Type>
+    <Description>The best cookies money can buy.</Description>
+  </info>
+  <info>
+    <name>Fresh Salmon</name>
+    <Image>./pics/salmon.jpg</Image>
+    <Weight>27</Weight>
+    <Quantity>1</Quantity>
+    <Price>7.71</Price>
+    <Type>Fish and Seafood</Type>
+    <Description>This salmon comes from fresh water.</Description>
+  </info>
+  <info>
+    <name>Fresh Haddock Fillet</name>
+    <Image>./pics/Fresh Haddock Fillet.jpg</Image>
+    <Weight>14</Weight>
+    <Quantity>1</Quantity>
+    <Price>6.39</Price>
+    <Type>Fish and Seafood</Type>
+    <Description>This fish is fished in the freshest waters.</Description>
+  </info>
+  <info>
+    <name>Lobster</name>
+    <Image>./pics/lobster.JPG</Image>
+    <Weight>200</Weight>
+    <Quantity>1</Quantity>
+    <Price>25.66</Price>
+    <Type>Fish and Seafood</Type>
+    <Description>This lobster comes from the waters of Gaspesie.</Description>
+  </info>
+  <info>
+    <name>Squid</name>
+    <Image>./pics/FrozenSquidRings.JPG</Image>
+    <Weight>225</Weight>
+    <Quantity>1</Quantity>
+    <Price>28.99</Price>
+    <Type>Fish and Seafood</Type>
+    <Description>Our squids all come from the waters of Gaspesie.</Description>
+  </info>
+  <info>
+    <name>Apple, Granny Smith</name>
+    <Image>./pics/apple.jpg</Image>
+    <Weight>120</Weight>
+    <Quantity>1</Quantity>
+    <Price>0.99</Price>
+    <Type>Fruits and Vegeteables</Type>
+    <Description>These apples are grown in Montreal orchards.</Description>
+  </info>
+  <info>
+    <name>Premium Banana</name>
+    <Image>./pics/banana.webp</Image>
+    <Weight>110</Weight>
+    <Quantity>1</Quantity>
+    <Price>0.49</Price>
+    <Type>Fruits and Vegeteables</Type>
+    <Description>These bananas come from the Amazon jungle.</Description>
+  </info>
+  <info>
+    <name>Strawberry</name>
+    <Image>./pics/strawberries.jpg</Image>
+    <Weight>150</Weight>
+    <Quantity>3</Quantity>
+    <Price>5.49</Price>
+    <Type>Fruits and Vegeteables</Type>
+    <Description>These strawberries are picked from Florida.</Description>
+  </info>
+  <info>
+    <name>Sweet Bell Pepper, Red</name>
+    <Image>./pics/bellpeper.jpg</Image>
+    <Weight>140</Weight>
+    <Quantity>1</Quantity>
+    <Price>2.99</Price>
+    <Type>Fruits and Vegeteables</Type>
+    <Description>These peppers come from North Carolina.</Description>
+  </info>
+  <info>
+    <name>Ciabatta</name>
+    <Image>./pics/ciabatta.jpg</Image>
+    <Weight>25</Weight>
+    <Quantity>1</Quantity>
+    <Price>2.79</Price>
+    <Type>Bread and Bakery</Type>
+    <Description>Freshly made everyday by our loving staff.</Description>
+  </info>
+  <info>
+    <name>Pita</name>
+    <Image>./pics/pita.jpg</Image>
+    <Weight>120</Weight>
+    <Quantity>1</Quantity>
+    <Price>1.49</Price>
+    <Type>Bread and Bakery</Type>
+    <Description>Freshly made by our wonderful staff. </Description>
+  </info>
+  <info>
+    <name>Baguette</name>
+    <Image>./pics/bag.jpg</Image>
+    <Weight>12</Weight>
+    <Quantity>1</Quantity>
+    <Price>1.99</Price>
+    <Type>Bread and Bakery</Type>
+    <Description>These baguettes are our best sellers.</Description>
+  </info>
+  <info>
+    <name>Croissant</name>
+    <Image>pics/croissant.jfif</Image>
+    <Weight>85</Weight>
+    <Quantity>1</Quantity>
+    <Price>4.49</Price>
+    <Type>Bread and Bakery</Type>
+    <Description>Our croissants can last up to 3 weeks.</Description>
+  </info>
+  
 </root>
