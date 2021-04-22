@@ -70,7 +70,7 @@ $Errors = array('N_name'=>'');
 if(isset($_POST['insert']))
 {
 
-$Pass=123;
+$Pass="Admin123!";
 $PSWD = $_POST['pwds'];
 $PSWD_ = $_POST['pwd'];
 
