@@ -12,7 +12,7 @@ $xml_=simplexml_load_file("a.xml");
 
 if (isset($_POST['edit']))
 {
-$Pass=123;
+$Pass="Admin123!";
 $PSWD = $_POST['pwds'];
 $PSWD_ = $_POST['pwd'];
 
