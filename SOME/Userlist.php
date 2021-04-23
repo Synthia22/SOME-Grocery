@@ -31,8 +31,8 @@
             </div>   
         </header>
        <?php 
-           if (file_exists('lire.xml')) {
-            $xml = simplexml_load_file('lire.xml');
+           if (file_exists('Accounts.xml')) {
+            $xml = simplexml_load_file('Accounts.xml');
             echo "<div id = 'Yaha'>\n";
             echo "<form><p>\n";
             echo "<table id= 'myTable' name ='myTable' style border='border'>\n";
@@ -67,7 +67,7 @@
              echo "</div>\n";
 
         } else {
-            exit('Failed to open lire.xml.');
+            exit('Failed to open Accounts.xml.');
         }
 
         ?>
@@ -159,7 +159,7 @@
         <p><input type = "submit"  value = "Save" onclick="bringBack()"/></p>
       </form>
       <?php
-      $users = simplexml_load_file('lire.xml');
+      $users = simplexml_load_file('Accounts.xml');
       $index =$_REQUEST['voir']-1;
       if(isset($_REQUEST['fname'])){
       $users->user[$index]->name = $_REQUEST['fname'];
@@ -170,14 +170,14 @@
       $users->user[$index]->address = $_REQUEST['address'];
       $users->user[$index]->code = $_REQUEST['postalCode'];
       $users->user[$index]->password = $_REQUEST['cpwd'];
-      $users->asXML('lire.xml');}
+      $users->asXML('Accounts.xml');}
       ?>
 </div>
 </div>
 <div id="Appending" style="display: none;"><h2>New User</h2> <br>
     <div class="personalinfo">
         <h4> User's Information </h4>
-        <form action = "U3.php">
+        <form action = "Userlist.php">
         <div class="Name">
                 <div id="fN">
                     <label for="fname"> First Name </label> <br>
@@ -278,12 +278,12 @@
         <p><input type = "submit"  value = "Delete" onclick="deleteUser2()"/></p>
       </form>
       <?php
-      $u = simplexml_load_file('lire.xml');
+      $u = simplexml_load_file('Accounts.xml');
       if(isset($_REQUEST['del'])){
           if(strcmp ("",$_REQUEST['del'])!=0){
         $doigt =$_REQUEST['del']-1;
         unset($u->user[$doigt]);
-      $u->asXML('lire.xml');
+      $u->asXML('Accounts.xml');
           }
     }
       ?>
