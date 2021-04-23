@@ -8,8 +8,8 @@
         <title> 
             UserList
         </title>
-        <link rel="stylesheet" href="UserList.css">
-        <script type = "text/javascript"  src = "UserList.js" ></script>
+        <link rel="stylesheet" href="Userlist.css">
+        <script type = "text/javascript"  src = "Userlist.js" ></script>
         <script src="https://kit.fontawesome.com/fc09e132f7.js" crossorigin="anonymous"></script>
     </head>
 
@@ -25,7 +25,7 @@
                     <a href="about.html">About Us</a>
                     <a href="service.html">Services</a>
                     <a id="cartB" href="cart.php"><i class="fas fa-shopping-cart"></i>My Cart</a>
-                    <a id="SignB" href="Sign In.php"><i class="far fa-user"></i>Sign In</a> 
+                    <a id="SignB" href="Sign In.html"><i class="far fa-user"></i>Sign In</a> 
                 </nav>
 
             </div>   
@@ -43,7 +43,6 @@
             echo "<th>Email Address</th>\n";
             echo "<th>Phone Number</th>\n";
             echo "<th>Edition</th>\n";
-            echo "<th>Deletion</th>\n";
             echo "</tr>\n";
             $indi = 1;
             foreach ($xml->user as $user) {
@@ -58,12 +57,12 @@
                 echo "<td style='display:none'>".$user->region."</td>\n";
                 echo "<td type='password' style='display:none'>".$user->password."</td>\n";
                 echo "<p><td><input type = 'button'  value = 'Edit' onclick=\"change($indi)\"/></td></p>\n";
-                echo "<p><td><input type = 'button'  value = 'Delete' onclick=\"deleteUser($indi)\"/></td></p>\n";
                 echo "</tr>\n";
                 $indi++;
              }
              echo "</table>\n</p>\n";
-             echo "<p><input type = 'button' value = 'Add' id ='Add' onclick=\"unHideAdd()\"/></p>";
+             echo "<p><input type = 'button' value = 'Add' id ='Add' onclick=\"unHideAdd()\"/></p></br>";
+             echo "<p><input type = 'button' value = 'Delete' id ='efface' onclick=\"deleteUser()\"/></p></br>";
              echo "</form>\n";
              echo "</div>\n";
 
@@ -76,17 +75,17 @@
         <h2>EDIT</h2> <br>
     <div class="personalinfo">
         <h4> Edit User's Information </h4>
-        <form action = "index.html"></form>
+        <form action = "Userlist.php">
         <div class="Name">
                 <div id="fN">
-                    <input type="voir" id="voir" name="voir" value="0" style="display: none;">
+                    <input type="text" id="voir" name="voir" value="0" style="display: none;" >
                     <input type="password" id="mdp" name="mdp" value="0" style="display: none;">
                     <label for="fname"> First Name </label> <br>
                     <input type="fname" id="fname" name="fname"> 
                 </div>
                 <div id="lN">
                     <label for="lname"> Last Name </label> <br>
-                    <input type="lname" id="lname" name="lname"> 
+                    <input type="text" id="lname" name="lname"> 
                 </div>
         </div> 
     </div><br>
@@ -157,21 +156,36 @@
         <input type="password" id="cpwd" name="cpwd">
     </p>
     
-        <p><input type = "button"  value = "Save" onclick="bringBack()"/></p>
+        <p><input type = "submit"  value = "Save" onclick="bringBack()"/></p>
       </form>
+      <?php
+      $users = simplexml_load_file('lire.xml');
+      $index =$_REQUEST['voir']-1;
+      if(isset($_REQUEST['fname'])){
+      $users->user[$index]->name = $_REQUEST['fname'];
+      $users->user[$index]->lastname = $_REQUEST['lname'];
+      $users->user[$index]->email = $_REQUEST['cemail'];
+      $users->user[$index]->number = $_REQUEST['pnumber'];
+      $users->user[$index]->city = $_REQUEST['city'];
+      $users->user[$index]->address = $_REQUEST['address'];
+      $users->user[$index]->code = $_REQUEST['postalCode'];
+      $users->user[$index]->password = $_REQUEST['cpwd'];
+      $users->asXML('lire.xml');}
+      ?>
 </div>
 </div>
 <div id="Appending" style="display: none;"><h2>New User</h2> <br>
     <div class="personalinfo">
         <h4> User's Information </h4>
+        <form action = "U3.php">
         <div class="Name">
                 <div id="fN">
                     <label for="fname"> First Name </label> <br>
-                    <input type="fname" id="fname2" name="fname2"> 
+                    <input type="text" id="fname2" name="fname2"> 
                 </div>
                 <div id="lN">
                     <label for="lname"> Last Name </label> <br>
-                    <input type="lname" id="lname2" name="lname2"> 
+                    <input type="text" id="lname2" name="lname2"> 
                 </div>
         </div> 
     </div><br>
@@ -180,17 +194,17 @@
         <h4> Contact Information </h4>
         <p>
             <label for="address"> Address </label> <br>
-            <input type="address" id="address2" name="address2">
+            <input type="text" id="address2" name="address2">
         </p>
         
         <div class="top">
             <div id="ct">
                 <label for="city"> City  </label> <br>
-                <input type="city" id="city2" name="city2">
+                <input type="text" id="city2" name="city2">
             </div>
             <div id="pc">
                 <label for="postalCode"> Postal Code </label> <br>
-                <input type="postalCode" id="postalCode2" name="postalCode2" placeholder="i.e: A2F J9K">
+                <input type="postalCode" id="postalCode2" name="postalCode2" placeholder="i.e: A2F 9K7">
             </div>
         </div> 
 
@@ -241,9 +255,39 @@
         <label for="cpwd"> Confirm Password </label> <br>
         <input type="password" id="cpwd2" name="cpwd2">
     </p>
-    <form action = "index.html">
-        <p><input type="button" value="Add User" onclick="save()"></button></p>
+    
+        <p><input type="button" value="Add User" onclick="save()"></p>
       </form>
+      
+</div>
+</div>
+
+<div id = "Deleting" style="display: none;">
+        <h2>Which user do you want to delete ?(Enter a number)</h2> <br>
+    <div class="personalinfo">
+        <form action = "Userlist.php">
+
+    <div class="contactInfo">
+        <p>
+            <label for="del"> Number of user </label> <br>
+            <input type="text" id="del" name="del">
+        </p>
+
+    
+    
+        <p><input type = "submit"  value = "Delete" onclick="deleteUser2()"/></p>
+      </form>
+      <?php
+      $u = simplexml_load_file('lire.xml');
+      if(isset($_REQUEST['del'])){
+          if(strcmp ("",$_REQUEST['del'])!=0){
+        $doigt =$_REQUEST['del']-1;
+        unset($u->user[$doigt]);
+      $u->asXML('lire.xml');
+          }
+    }
+      ?>
+</div>
 </div>
 </div>
           <br>
