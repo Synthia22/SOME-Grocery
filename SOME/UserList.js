@@ -1,4 +1,5 @@
 function change(i){
+    document.getElementById("efface").style.display="none";
     var myTable = document.getElementById("myTable");
     var row = document.getElementById("row-"+i);
 myTable.style.display = "none";
@@ -60,7 +61,7 @@ document.getElementById("myTable").rows[i].cells[4].innerHTML=document.getElemen
 document.getElementById("myTable").rows[i].cells[5].innerHTML=document.getElementById("address").value;
 document.getElementById("myTable").rows[i].cells[6].innerHTML=document.getElementById("postalCode").value;
 document.getElementById("myTable").rows[i].cells[8].innerHTML=document.getElementById("cpwd").value;
-
+document.getElementById("efface").style.display="initial";
 }
 function save(){
     const code = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
@@ -103,7 +104,6 @@ var cell6 = row.insertCell(6);
 var cell7 = row.insertCell(7);
 var cell8 = row.insertCell(8);
 var cell9 = row.insertCell(9);
-var cell10 = row.insertCell(10);
 // Add some text to the new cells:
 cell0.innerHTML = document.getElementById("fname2").value;
 cell1.innerHTML = document.getElementById("lname2").value;
@@ -115,7 +115,6 @@ cell6.innerHTML = document.getElementById("postalCode2").value;
 cell7.innerHTML = document.getElementById("province2").value;
 cell8.innerHTML = document.getElementById("cpwd2").value;
 cell9.innerHTML ='<input type = "button"  value = "Edit" onclick="change(' + i + ')"/>';
-cell10.innerHTML ='<input type = "button"  value = "Delete" onclick="deleteUser(' + i + ')"/>';
 
 
 cell4.style="display:none";
@@ -138,20 +137,24 @@ document.getElementById("city2").value="";
 document.getElementById("pwd2").value="";
 document.getElementById("cpwd2").value="";
 document.getElementById("postalCode2").value="";
-   
+document.getElementById("efface").style.display="initial";
 }
 function unHideAdd(){
     var myTable = document.getElementById("myTable");
     myTable.style.display = "none";
+    document.getElementById("efface").style.display="none";
     document.getElementById("Add").style.display="none";
     document.getElementById("Appending").style.display="initial";
 }
-function deleteUser(i){
-    var myTable = document.getElementById("myTable");
-    var row = document.getElementById("row-"+i);
-    row.style.display="none";
+function deleteUser(){
+    document.getElementById("efface").style.display="none";
+    document.getElementById("Deleting").style.display="initial";
+    document.getElementById("del").value="";
 }
 
+function deleteUser2(){
+    document.getElementById("Deleting").style.display="none";
+}
 function rowInd(x){
     return x.rowIndex;
 }
@@ -169,3 +172,4 @@ for (var i = 1; i < tables.length; i++) {
     table.id = "row-"+i;
 }
     }
+
